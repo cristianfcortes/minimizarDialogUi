@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Boton minimizar Dialog UI</title>
+	<link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
+</head>
+<body>
+
+	<div id="dialog" title="Basic dialog">
+		<p>This is the default dialog which is useful for displaying information. The dialog window can be moved, resized and closed with the 'x' icon.</p>
+	</div>
+
+	<!-- <div id="dialog"></div> -->
+
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<script type="text/javascript" src="plugin.js"></script>
+<script type="text/javascript">
+
+$(window).ready(function(){
+
+		$("#dialog" ).dialog({
+			//modal: false,	
+			//resizable: false,
+			//width: 700,				
+			open: function (type,data) { 	
+				minimizarDialogUi('dialog');
+
+			},
+			close: function() {
+			}			
+		});
+	});
+
+</script>
+
+</body>
+</html>
